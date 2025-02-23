@@ -1,25 +1,17 @@
 {
-  "name": "backend_ticket",
+  "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon -r dotenv/config index.js"
+    "start": "node src/index.js",
+    "dev" : "nodemon -r dotenv/config src/index.js"
   },
-  "keywords": [
-    "backend",
-    "bookingd"
-  ],
   "author": "Ishan Jaiswal",
   "license": "ISC",
-  "description": "backend of a ticket booking web app",
+  "description": "",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.10.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.9"
   }
 }

@@ -1,12 +1,14 @@
 import { Router } from "express";
-import { showAllticket } from "../controllers/ticket.controller.js";
+import { showAllBookedTicket } from "../controllers/ticket.controller.js";
+import { APICALLS } from "../controllers/user.controller.js";
 
 
 const router = Router();
 
 
 
-router.route("/getTickets").get(showAllticket);
+router.route("/getTickets").get(showAllBookedTicket);
+router.route("/apicall").get(APICALLS)
 
 
 

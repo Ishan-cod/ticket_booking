@@ -13,16 +13,20 @@ app.use(express.json({
     limit:"16kb"
 }))
 
-app.use(express.static("./public"))
+app.use("/public",express.static("./public"))
 
 app.use(cookieParser())
 
 
 // Route declaration
 import ticketRoute from "./routes/ticket.route.js"
+import userRoute from "./routes/user.route.js"
+import trainRoute from "./routes/train.route.js"
 
 
-app.use("/api/v1/ticket", ticketRoute)
+app.use("/ticket", ticketRoute)
+app.use("/user", userRoute)
+app.use("/train", trainRoute)
 
 
 export {app}

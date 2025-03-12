@@ -1,5 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
+
 const trainschema = new Schema(
   {
     trainname: {
@@ -16,11 +17,13 @@ const trainschema = new Schema(
       required: true,
     },
     start: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "stations",
       required: true,
     },
     destination: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "stations",
       required: true,
     },
     route: [
@@ -30,14 +33,15 @@ const trainschema = new Schema(
           ref: "stations",
         },
         arrivalTime: {
-          type: String,
+          type: String, //18:01
           required: true,
         },
         departureTime: {
-          type: String,
+          type: String,//15:08
           required: true,
         },
       },
+      
     ],
   },
   {

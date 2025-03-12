@@ -22,11 +22,13 @@ app.use(cookieParser())
 import ticketRoute from "./routes/ticket.route.js"
 import userRoute from "./routes/user.route.js"
 import trainRoute from "./routes/train.route.js"
+import stationRoute from "./routes/station.route.js"
 
 
 app.use("/ticket", ticketRoute)
 app.use("/user", userRoute)
 app.use("/train", trainRoute)
+app.use("/station", stationRoute)
 
 
 export {app}
